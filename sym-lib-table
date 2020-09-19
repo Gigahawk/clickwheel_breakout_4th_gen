@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name gigahawk)(type Legacy)(uri ${KIPRJMOD}/Gigahawk.pretty/gigahawk.lib)(options "")(descr ""))
+)

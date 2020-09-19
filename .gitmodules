@@ -1,0 +1,3 @@
+[submodule "Gigahawk.pretty"]
+	path = Gigahawk.pretty
+	url = git@github.com:Gigahawk/Gigahawk.pretty.git
