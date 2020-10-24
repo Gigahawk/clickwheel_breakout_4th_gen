@@ -48,11 +48,11 @@ $EndComp
 NoConn ~ 1500 3050
 NoConn ~ 1500 3150
 Text GLabel 2500 3050 2    50   Input ~ 0
-CW_1
+CW_VBAT
 Wire Wire Line
 	2400 3050 2500 3050
 Text GLabel 2500 3150 2    50   Input ~ 0
-CW_2
+CW_SCL
 Wire Wire Line
 	2400 3150 2500 3150
 Text GLabel 2500 3250 2    50   Input ~ 0
@@ -68,7 +68,7 @@ CW_5
 Wire Wire Line
 	2400 3450 2500 3450
 Text GLabel 2500 3550 2    50   Input ~ 0
-CW_6
+CW_SDA
 Wire Wire Line
 	2400 3550 2500 3550
 Text GLabel 2500 3650 2    50   Input ~ 0
@@ -76,7 +76,7 @@ CW_7
 Wire Wire Line
 	2400 3650 2500 3650
 Text GLabel 2500 3750 2    50   Input ~ 0
-CW_8
+CW_GND
 Wire Wire Line
 	2400 3750 2500 3750
 Text GLabel 2500 4450 2    50   Input ~ 0
@@ -174,11 +174,11 @@ NoConn ~ 3100 3150
 NoConn ~ 3100 4450
 NoConn ~ 3100 4550
 Text GLabel 4100 3750 2    50   Input ~ 0
-CW_1MB
+CW_VBATMB
 Wire Wire Line
 	4000 3750 4100 3750
 Text GLabel 4100 3650 2    50   Input ~ 0
-CW_2MB
+CW_SCLMB
 Wire Wire Line
 	4000 3650 4100 3650
 Text GLabel 4100 3550 2    50   Input ~ 0
@@ -194,7 +194,7 @@ CW_5MB
 Wire Wire Line
 	4000 3350 4100 3350
 Text GLabel 4100 3250 2    50   Input ~ 0
-CW_6MB
+CW_SDAMB
 Wire Wire Line
 	4000 3250 4100 3250
 Text GLabel 4100 3150 2    50   Input ~ 0
@@ -202,7 +202,7 @@ CW_7MB
 Wire Wire Line
 	4000 3150 4100 3150
 Text GLabel 4100 3050 2    50   Input ~ 0
-CW_8MB
+CW_GNDMB
 Wire Wire Line
 	4000 3050 4100 3050
 Text GLabel 4100 5750 2    50   Input ~ 0
@@ -262,11 +262,11 @@ HP_14MB
 Wire Wire Line
 	4000 4450 4100 4450
 Text GLabel 6400 3700 2    50   Input ~ 0
-CW_1MB
+CW_VBATMB
 Wire Wire Line
 	6300 3700 6400 3700
 Text GLabel 6400 3600 2    50   Input ~ 0
-CW_2MB
+CW_SCLMB
 Wire Wire Line
 	6300 3600 6400 3600
 Text GLabel 6400 3500 2    50   Input ~ 0
@@ -282,7 +282,7 @@ CW_5MB
 Wire Wire Line
 	6300 3300 6400 3300
 Text GLabel 6400 3200 2    50   Input ~ 0
-CW_6MB
+CW_SDAMB
 Wire Wire Line
 	6300 3200 6400 3200
 Text GLabel 6400 3100 2    50   Input ~ 0
@@ -290,7 +290,7 @@ CW_7MB
 Wire Wire Line
 	6300 3100 6400 3100
 Text GLabel 6400 3000 2    50   Input ~ 0
-CW_8MB
+CW_GNDMB
 Wire Wire Line
 	6300 3000 6400 3000
 $Comp
@@ -430,7 +430,7 @@ $EndComp
 Wire Wire Line
 	5800 3000 5700 3000
 Text GLabel 5700 3000 0    50   Input ~ 0
-CW_8
+CW_GND
 Wire Wire Line
 	5800 3100 5700 3100
 Text GLabel 5700 3100 0    50   Input ~ 0
@@ -438,7 +438,7 @@ CW_7
 Wire Wire Line
 	5800 3200 5700 3200
 Text GLabel 5700 3200 0    50   Input ~ 0
-CW_6
+CW_SDA
 Wire Wire Line
 	5800 3300 5700 3300
 Text GLabel 5700 3300 0    50   Input ~ 0
@@ -454,11 +454,11 @@ CW_3
 Wire Wire Line
 	5800 3600 5700 3600
 Text GLabel 5700 3600 0    50   Input ~ 0
-CW_2
+CW_SCL
 Wire Wire Line
 	5800 3700 5700 3700
 Text GLabel 5700 3700 0    50   Input ~ 0
-CW_1
+CW_VBAT
 $Comp
 L Connector:USB_C_Receptacle_USB2.0 J7
 U 1 1 5F69143B
