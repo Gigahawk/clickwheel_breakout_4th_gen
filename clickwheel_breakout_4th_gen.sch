@@ -56,7 +56,7 @@ CW_SCL
 Wire Wire Line
 	2400 3150 2500 3150
 Text GLabel 2500 3250 2    50   Input ~ 0
-CW_3
+CW_EN2
 Wire Wire Line
 	2400 3250 2500 3250
 Text GLabel 2500 3350 2    50   Input ~ 0
@@ -72,7 +72,7 @@ CW_SDA
 Wire Wire Line
 	2400 3550 2500 3550
 Text GLabel 2500 3650 2    50   Input ~ 0
-CW_7
+CW_EN1
 Wire Wire Line
 	2400 3650 2500 3650
 Text GLabel 2500 3750 2    50   Input ~ 0
@@ -80,21 +80,21 @@ CW_GND
 Wire Wire Line
 	2400 3750 2500 3750
 Text GLabel 2500 4450 2    50   Input ~ 0
-HP_1
+HP_SHIELD2
 Wire Wire Line
 	2400 4450 2500 4450
 NoConn ~ 1500 4450
 NoConn ~ 1500 4550
 Text GLabel 2500 4550 2    50   Input ~ 0
-HP_2
+HP_CLICKER
 Wire Wire Line
 	2400 4550 2500 4550
 Text GLabel 2500 4650 2    50   Input ~ 0
-HP_3
+HP_RMT4_3V3
 Wire Wire Line
 	2400 4650 2500 4650
 Text GLabel 2500 4750 2    50   Input ~ 0
-HP_4
+HP_LCK_COM
 Wire Wire Line
 	2400 4750 2500 4750
 Text GLabel 2500 4850 2    50   Input ~ 0
@@ -102,23 +102,23 @@ HP_5
 Wire Wire Line
 	2400 4850 2500 4850
 Text GLabel 2500 4950 2    50   Input ~ 0
-HP_6
+HP_HPR1_R
 Wire Wire Line
 	2400 4950 2500 4950
 Text GLabel 2500 5050 2    50   Input ~ 0
-HP_7
+HP_HPT_L
 Wire Wire Line
 	2400 5050 2500 5050
 Text GLabel 2500 5150 2    50   Input ~ 0
-HP_8
+HP_RMT3_DGND
 Wire Wire Line
 	2400 5150 2500 5150
 Text GLabel 2500 5250 2    50   Input ~ 0
-HP_9
+HP_HPSL_VIDEO
 Wire Wire Line
 	2400 5250 2500 5250
 Text GLabel 2500 5350 2    50   Input ~ 0
-HP_10
+HP_HPR2_AGND
 Wire Wire Line
 	2400 5350 2500 5350
 Text GLabel 2500 5450 2    50   Input ~ 0
@@ -126,15 +126,15 @@ HP_11
 Wire Wire Line
 	2400 5450 2500 5450
 Text GLabel 2500 5550 2    50   Input ~ 0
-HP_12
+HP_RMT2_TxD
 Wire Wire Line
 	2400 5550 2500 5550
 Text GLabel 2500 5650 2    50   Input ~ 0
-HP_13
+HP_RMT1_RxD
 Wire Wire Line
 	2400 5650 2500 5650
 Text GLabel 2500 5750 2    50   Input ~ 0
-HP_14
+HP_SHIELD1
 Wire Wire Line
 	2400 5750 2500 5750
 $Comp
@@ -182,7 +182,7 @@ CW_SCLMB
 Wire Wire Line
 	4000 3650 4100 3650
 Text GLabel 4100 3550 2    50   Input ~ 0
-CW_3MB
+CW_EN2MB
 Wire Wire Line
 	4000 3550 4100 3550
 Text GLabel 4100 3450 2    50   Input ~ 0
@@ -198,7 +198,7 @@ CW_SDAMB
 Wire Wire Line
 	4000 3250 4100 3250
 Text GLabel 4100 3150 2    50   Input ~ 0
-CW_7MB
+CW_EN1MB
 Wire Wire Line
 	4000 3150 4100 3150
 Text GLabel 4100 3050 2    50   Input ~ 0
@@ -206,19 +206,19 @@ CW_GNDMB
 Wire Wire Line
 	4000 3050 4100 3050
 Text GLabel 4100 5750 2    50   Input ~ 0
-HP_1MB
+HP_SHIELD2MB
 Wire Wire Line
 	4000 5750 4100 5750
 Text GLabel 4100 5650 2    50   Input ~ 0
-HP_2MB
+HP_CLICKERMB
 Wire Wire Line
 	4000 5650 4100 5650
 Text GLabel 4100 5550 2    50   Input ~ 0
-HP_3MB
+HP_RMT4_3V3MB
 Wire Wire Line
 	4000 5550 4100 5550
 Text GLabel 4100 5450 2    50   Input ~ 0
-HP_4MB
+HP_LCK_COMMB
 Wire Wire Line
 	4000 5450 4100 5450
 Text GLabel 4100 5350 2    50   Input ~ 0
@@ -226,23 +226,23 @@ HP_5MB
 Wire Wire Line
 	4000 5350 4100 5350
 Text GLabel 4100 5250 2    50   Input ~ 0
-HP_6MB
+HP_HPR1_RMB
 Wire Wire Line
 	4000 5250 4100 5250
 Text GLabel 4100 5150 2    50   Input ~ 0
-HP_7MB
+HP_HPT_LMB
 Wire Wire Line
 	4000 5150 4100 5150
 Text GLabel 4100 5050 2    50   Input ~ 0
-HP_8MB
+HP_RMT3_DGNDMB
 Wire Wire Line
 	4000 5050 4100 5050
 Text GLabel 4100 4950 2    50   Input ~ 0
-HP_9MB
+HP_HPSL_VIDEOMB
 Wire Wire Line
 	4000 4950 4100 4950
 Text GLabel 4100 4850 2    50   Input ~ 0
-HP_10MB
+HP_HPR2_AGNDMB
 Wire Wire Line
 	4000 4850 4100 4850
 Text GLabel 4100 4750 2    50   Input ~ 0
@@ -250,15 +250,15 @@ HP_11MB
 Wire Wire Line
 	4000 4750 4100 4750
 Text GLabel 4100 4650 2    50   Input ~ 0
-HP_12MB
+HP_RMT2_TxDMB
 Wire Wire Line
 	4000 4650 4100 4650
 Text GLabel 4100 4550 2    50   Input ~ 0
-HP_13MB
+HP_RMT1_RxDMB
 Wire Wire Line
 	4000 4550 4100 4550
 Text GLabel 4100 4450 2    50   Input ~ 0
-HP_14MB
+HP_SHIELD1MB
 Wire Wire Line
 	4000 4450 4100 4450
 Text GLabel 6400 3700 2    50   Input ~ 0
@@ -270,7 +270,7 @@ CW_SCLMB
 Wire Wire Line
 	6300 3600 6400 3600
 Text GLabel 6400 3500 2    50   Input ~ 0
-CW_3MB
+CW_EN2MB
 Wire Wire Line
 	6300 3500 6400 3500
 Text GLabel 6400 3400 2    50   Input ~ 0
@@ -286,7 +286,7 @@ CW_SDAMB
 Wire Wire Line
 	6300 3200 6400 3200
 Text GLabel 6400 3100 2    50   Input ~ 0
-CW_7MB
+CW_EN1MB
 Wire Wire Line
 	6300 3100 6400 3100
 Text GLabel 6400 3000 2    50   Input ~ 0
@@ -305,19 +305,19 @@ F 3 "~" H 6000 5000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 6400 4400 2    50   Input ~ 0
-HP_1MB
+HP_SHIELD2MB
 Wire Wire Line
 	6300 4400 6400 4400
 Text GLabel 6400 4500 2    50   Input ~ 0
-HP_2MB
+HP_CLICKERMB
 Wire Wire Line
 	6300 4500 6400 4500
 Text GLabel 6400 4600 2    50   Input ~ 0
-HP_3MB
+HP_RMT4_3V3MB
 Wire Wire Line
 	6300 4600 6400 4600
 Text GLabel 6400 4700 2    50   Input ~ 0
-HP_4MB
+HP_LCK_COMMB
 Wire Wire Line
 	6300 4700 6400 4700
 Text GLabel 6400 4800 2    50   Input ~ 0
@@ -325,23 +325,23 @@ HP_5MB
 Wire Wire Line
 	6300 4800 6400 4800
 Text GLabel 6400 4900 2    50   Input ~ 0
-HP_6MB
+HP_HPR1_RMB
 Wire Wire Line
 	6300 4900 6400 4900
 Text GLabel 6400 5000 2    50   Input ~ 0
-HP_7MB
+HP_HPT_LMB
 Wire Wire Line
 	6300 5000 6400 5000
 Text GLabel 6400 5100 2    50   Input ~ 0
-HP_8MB
+HP_RMT3_DGNDMB
 Wire Wire Line
 	6300 5100 6400 5100
 Text GLabel 6400 5200 2    50   Input ~ 0
-HP_9MB
+HP_HPSL_VIDEOMB
 Wire Wire Line
 	6300 5200 6400 5200
 Text GLabel 6400 5300 2    50   Input ~ 0
-HP_10MB
+HP_HPR2_AGNDMB
 Wire Wire Line
 	6300 5300 6400 5300
 Text GLabel 6400 5400 2    50   Input ~ 0
@@ -349,31 +349,31 @@ HP_11MB
 Wire Wire Line
 	6300 5400 6400 5400
 Text GLabel 6400 5500 2    50   Input ~ 0
-HP_12MB
+HP_RMT2_TxDMB
 Wire Wire Line
 	6300 5500 6400 5500
 Text GLabel 6400 5600 2    50   Input ~ 0
-HP_13MB
+HP_RMT1_RxDMB
 Wire Wire Line
 	6300 5600 6400 5600
 Text GLabel 6400 5700 2    50   Input ~ 0
-HP_14MB
+HP_SHIELD1MB
 Wire Wire Line
 	6300 5700 6400 5700
 Text GLabel 5700 4400 0    50   Input ~ 0
-HP_1
+HP_SHIELD2
 Wire Wire Line
 	5800 4400 5700 4400
 Text GLabel 5700 4500 0    50   Input ~ 0
-HP_2
+HP_CLICKER
 Wire Wire Line
 	5800 4500 5700 4500
 Text GLabel 5700 4600 0    50   Input ~ 0
-HP_3
+HP_RMT4_3V3
 Wire Wire Line
 	5800 4600 5700 4600
 Text GLabel 5700 4700 0    50   Input ~ 0
-HP_4
+HP_LCK_COM
 Wire Wire Line
 	5800 4700 5700 4700
 Text GLabel 5700 4800 0    50   Input ~ 0
@@ -381,23 +381,23 @@ HP_5
 Wire Wire Line
 	5800 4800 5700 4800
 Text GLabel 5700 4900 0    50   Input ~ 0
-HP_6
+HP_HPR1_R
 Wire Wire Line
 	5800 4900 5700 4900
 Text GLabel 5700 5000 0    50   Input ~ 0
-HP_7
+HP_HPT_L
 Wire Wire Line
 	5800 5000 5700 5000
 Text GLabel 5700 5100 0    50   Input ~ 0
-HP_8
+HP_RMT3_DGND
 Wire Wire Line
 	5800 5100 5700 5100
 Text GLabel 5700 5200 0    50   Input ~ 0
-HP_9
+HP_HPSL_VIDEO
 Wire Wire Line
 	5800 5200 5700 5200
 Text GLabel 5700 5300 0    50   Input ~ 0
-HP_10
+HP_HPR2_AGND
 Wire Wire Line
 	5800 5300 5700 5300
 Text GLabel 5700 5400 0    50   Input ~ 0
@@ -405,15 +405,15 @@ HP_11
 Wire Wire Line
 	5800 5400 5700 5400
 Text GLabel 5700 5500 0    50   Input ~ 0
-HP_12
+HP_RMT2_TxD
 Wire Wire Line
 	5800 5500 5700 5500
 Text GLabel 5700 5600 0    50   Input ~ 0
-HP_13
+HP_RMT1_RxD
 Wire Wire Line
 	5800 5600 5700 5600
 Text GLabel 5700 5700 0    50   Input ~ 0
-HP_14
+HP_SHIELD1
 Wire Wire Line
 	5800 5700 5700 5700
 $Comp
@@ -434,7 +434,7 @@ CW_GND
 Wire Wire Line
 	5800 3100 5700 3100
 Text GLabel 5700 3100 0    50   Input ~ 0
-CW_7
+CW_EN1
 Wire Wire Line
 	5800 3200 5700 3200
 Text GLabel 5700 3200 0    50   Input ~ 0
@@ -450,7 +450,7 @@ CW_4
 Wire Wire Line
 	5800 3500 5700 3500
 Text GLabel 5700 3500 0    50   Input ~ 0
-CW_3
+CW_EN2
 Wire Wire Line
 	5800 3600 5700 3600
 Text GLabel 5700 3600 0    50   Input ~ 0
@@ -470,17 +470,19 @@ F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 8250 23
 	1    8100 2350
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:GND #PWR0101
-U 1 1 5F693C0F
-P 8100 3350
-F 0 "#PWR0101" H 8100 3100 50  0001 C CNN
-F 1 "GND" H 8105 3177 50  0000 C CNN
-F 2 "" H 8100 3350 50  0001 C CNN
-F 3 "" H 8100 3350 50  0001 C CNN
-	1    8100 3350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8100 3350 8100 3250
+Text Notes 1150 2650 0    50   ~ 0
+NOTE: CLICKWHEEL IS NOT AN I2C DEVICE.\nSee https://jasongarr.wordpress.com/project-pages/ipod-clickwheel-hack/ for more info
+NoConn ~ 7800 3250
+Text Notes 2150 6150 0    50   ~ 0
+Notes: \n- Shield is likely not connected to mainboard\n- Connect LCK_COM to DGND to unlock controls
+NoConn ~ 8100 3250
+NoConn ~ 8700 2950
+NoConn ~ 8700 2850
+NoConn ~ 8700 2550
+NoConn ~ 8700 2450
+NoConn ~ 8700 2350
+NoConn ~ 8700 2250
+NoConn ~ 8700 2050
+NoConn ~ 8700 1950
+NoConn ~ 8700 1750
 $EndSCHEMATC
