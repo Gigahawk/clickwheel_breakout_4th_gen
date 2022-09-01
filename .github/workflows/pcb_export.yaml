@@ -35,8 +35,9 @@ jobs:
           name: gerbers
           path: Manufacturers
 
-      - name: check git status
-        run: git status
-
-      - name: check git diff
-        run: git diff
+      - name: Upload schematics
+        if: ${{ !env.ACT }}
+        uses: actions/upload-artifact@v3
+        with:
+          name: schematics
+          path: Schematic
