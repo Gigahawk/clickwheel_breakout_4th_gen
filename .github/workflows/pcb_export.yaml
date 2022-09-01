@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Get current commit hash
-        run: echo "$GITHUB_SHA"
+      - name: Generate QR code text
+        run: python3 ./scripts/gen_qr_text.py
 
       #- name: Generate QR code
