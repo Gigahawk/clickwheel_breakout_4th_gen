@@ -1,3 +1,3 @@
 (sym_lib_table
-  (lib (name gigahawk)(type Legacy)(uri ${KIPRJMOD}/Gigahawk.pretty/gigahawk.lib)(options "")(descr ""))
+  (lib (name "gigahawk")(type "KiCad")(uri "${KIPRJMOD}/Gigahawk.pretty/gigahawk.kicad_sym")(options "")(descr ""))
 )

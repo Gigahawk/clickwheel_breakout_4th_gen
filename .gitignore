@@ -3,3 +3,5 @@ export
 **-bak
 **.FCStd*
 !**.FCStd
+**-backups
+**.kicad_prl
