@@ -1,5 +1,4 @@
 import os
-from datetime import datetime
 import yaml
 
 URL = "https://github.com/Gigahawk/clickwheel_breakout_4th_gen/tree"
@@ -8,7 +7,7 @@ config_path = os.environ["KIBOT_QR_CONFIG"]
 
 print("Generating QR text")
 
-date = datetime.strftime(datetime.now(), "%Y-%m-%d %H:%M:%S")
+date = os.environ["DATE"]
 
 hash_full = os.environ["GITHUB_SHA"]
 hash_short = hash_full[:7]

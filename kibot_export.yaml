@@ -7,7 +7,7 @@ preflight:
     - name: 'REVISION'
       command: 'git --no-pager log -1 --format="%h"'
     - name: 'DATE'
-      command: date +'%Y-%m-%d %H:%M:%S'
+      command: echo "$DATE"
 
 outputs:
   - name: basic_step
