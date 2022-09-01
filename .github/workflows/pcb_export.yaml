@@ -18,5 +18,8 @@ jobs:
       - name: Generate QR code footprint/symbol
         run: kibot -c "$KIBOT_QR_CONFIG"
 
+      - name: Generate manufacturing outputs
+        run: kibot -c kibot_export.yaml
+
       - name: check git status
         run: git status
