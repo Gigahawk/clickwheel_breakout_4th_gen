@@ -16,10 +16,10 @@ jobs:
         run: python3 ./scripts/gen_qr_kibot_config.py
 
       - name: Generate QR code footprint/symbol
-        run: kibot -c "$KIBOT_QR_CONFIG" --verbose
+        run: kibot -c "$KIBOT_QR_CONFIG"
 
       - name: Generate manufacturing outputs
-        run: kibot -c kibot_export.yaml --verbose
+        run: kibot -c kibot_export.yaml
 
       - name: Upload 3D models
         if: ${{ !env.ACT }}
