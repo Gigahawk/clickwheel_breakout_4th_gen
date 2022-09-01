@@ -37,3 +37,6 @@ jobs:
 
       - name: check git status
         run: git status
+
+      - name: check git diff
+        run: git diff

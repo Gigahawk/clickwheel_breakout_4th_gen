@@ -3,6 +3,11 @@ kibot:
 
 preflight:
   update_qr: true
+  set_text_variables:
+    - name: 'test'
+      text: 'test'
+      #before: 'Git hash: <'
+      #after: '>'
 
 
 outputs:
