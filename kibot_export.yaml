@@ -3,6 +3,7 @@ kibot:
 
 preflight:
   update_qr: true
+  some_random_fake_preflight: true
   set_text_variables:
     - name: 'test'
       text: 'test'
