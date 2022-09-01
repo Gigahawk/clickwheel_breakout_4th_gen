@@ -4,6 +4,8 @@ import yaml
 
 URL = "https://github.com/Gigahawk/clickwheel_breakout_4th_gen/tree"
 
+config_path = os.environ["KIBOT_QR_CONFIG"]
+
 print("Generating QR text")
 
 date = datetime.strftime(datetime.now(), "%Y-%m-%d %H:%M:%S")
@@ -32,6 +34,14 @@ config = {
     "kibot": {
         "version": 1
     },
+    "global": {
+        "filters": [
+            {
+                # Supress warning about extra spaces
+                "number": 37,
+            }
+        ]
+    },
     "outputs": [
         {
             "name": "QR Data Output",
@@ -59,7 +69,7 @@ print("#############")
 print(output)
 print("#############")
 
-with open("kibot_qr.yaml", "w") as f:
+with open(config_path, "w") as f:
     f.write(output)
 
 

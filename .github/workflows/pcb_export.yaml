@@ -4,13 +4,19 @@ on: push
 
 jobs:
   fab-files:
+    env:
+      KIBOT_QR_CONFIG: kibot_qr.yaml
     name: PCB fabrication files
     runs-on: ubuntu-latest
-    container: setsoft/kicad_auto:latest
+    container: setsoft/kicad_auto:ki6.0.7_Debian
     steps:
       - uses: actions/checkout@v2
 
       - name: Generate QR code text
         run: python3 ./scripts/gen_qr_kibot_config.py
 
-      #- name: Generate QR code
+      - name: Generate QR code footprint/symbol
+        run: kibot -c "$KIBOT_QR_CONFIG"
+
+      - name: check git status
+        run: git status
