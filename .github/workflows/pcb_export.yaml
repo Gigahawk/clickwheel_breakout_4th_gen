@@ -21,5 +21,19 @@ jobs:
       - name: Generate manufacturing outputs
         run: kibot -c kibot_export.yaml
 
+      - name: Upload 3D models
+        if: ${{ !env.ACT }}
+        uses: actions/upload-artifact@v3
+        with:
+          name: 3D
+          path: 3D
+
+      - name: Upload gerbers
+        if: ${{ !env.ACT }}
+        uses: actions/upload-artifact@v3
+        with:
+          name: gerbers
+          path: Manufacturers
+
       - name: check git status
         run: git status
