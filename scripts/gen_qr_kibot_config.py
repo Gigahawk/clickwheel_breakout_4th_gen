@@ -52,6 +52,7 @@ config = {
             "dir": "QR_libs",
             "options": {
                 "use_sch_dir": False,
+                "output": "QR.%x",
                 "qrs": [
                     {
                         "name": "QR_data",

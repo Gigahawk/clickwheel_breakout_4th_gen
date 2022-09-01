@@ -1,4 +1,4 @@
 (sym_lib_table
   (lib (name "gigahawk")(type "KiCad")(uri "${KIPRJMOD}/Gigahawk.pretty/gigahawk.kicad_sym")(options "")(descr ""))
-  (lib (name "clickwheel_breakout_4th_gen-qr")(type "KiCad")(uri "${KIPRJMOD}/QR_libs/clickwheel_breakout_4th_gen-qr.kicad_sym")(options "")(descr ""))
+  (lib (name "QR")(type "KiCad")(uri "${KIPRJMOD}/QR_libs/QR.kicad_sym")(options "")(descr ""))
 )
