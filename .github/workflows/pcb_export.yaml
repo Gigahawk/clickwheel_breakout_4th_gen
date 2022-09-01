@@ -1,0 +1,16 @@
+name: "Generate PCB production outputs"
+
+on: push
+
+jobs:
+  fab-files:
+    name: PCB fabrication files
+    runs-on: ubuntu-latest
+    container: setsoft/kicad_auto:latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Get current commit hash
+        run: echo "$GITHUB_SHA"
+
+      #- name: Generate QR code
