@@ -42,6 +42,9 @@ config = {
             }
         ]
     },
+    "preflight": {
+        "update_qr": True
+    },
     "outputs": [
         {
             "name": "QR Data Output",
