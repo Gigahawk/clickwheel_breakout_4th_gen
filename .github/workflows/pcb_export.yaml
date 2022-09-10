@@ -43,12 +43,23 @@ jobs:
       - name: Generate manufacturing outputs
         run: kibot -c kibot_export.yaml
 
+      - name: Generate 3D models
+        uses: Gigahawk/freecad-export-action@0.20.1
+        with:
+          paths: |
+            clickwheel_breakout_4th_gen.kicad_pcb
+          output-path: 3D_EXPORT
+          export-types: |
+            step
+            wrl
+            stl
+
       - name: Upload 3D models
         if: ${{ !env.ACT }}
         uses: actions/upload-artifact@v3
         with:
           name: ${{ env.MECH_NAME }}
-          path: 3D
+          path: 3D_EXPORT
 
       - name: Upload gerbers
         if: ${{ !env.ACT }}

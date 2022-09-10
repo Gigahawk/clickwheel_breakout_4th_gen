@@ -10,10 +10,6 @@ preflight:
       command: echo "$DATE"
 
 outputs:
-  - name: basic_step
-    comment: 3D model in STEP format
-    type: step
-    dir: 3D
 
   - name: JLCPCB_gerbers
     comment: Gerbers compatible with JLCPCB
