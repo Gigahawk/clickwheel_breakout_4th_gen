@@ -46,7 +46,7 @@ jobs:
         run: kibot -c kibot_export.yaml
 
       - name: Generate 3D models
-        uses: Gigahawk/freecad-export-action@0.20.1
+        uses: Gigahawk/freecad-export-action@0.20.1_2
         with:
           paths: |
             clickwheel_breakout_4th_gen.kicad_pcb
