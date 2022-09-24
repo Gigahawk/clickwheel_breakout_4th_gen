@@ -1,4 +1,4 @@
 (fp_lib_table
   (lib (name "Gigahawk")(type "KiCad")(uri "${KIPRJMOD}/Gigahawk.pretty")(options "")(descr ""))
-  (lib (name "clickwheel_breakout_4th_gen-qr")(type "KiCad")(uri "${KIPRJMOD}/QR_libs/clickwheel_breakout_4th_gen-qr.pretty")(options "")(descr ""))
+  (lib (name "QR")(type "KiCad")(uri "${KIPRJMOD}/QR_libs/QR.pretty")(options "")(descr ""))
 )

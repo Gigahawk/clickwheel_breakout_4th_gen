@@ -1,0 +1,78 @@
+name: "Generate PCB production outputs"
+
+on: push
+
+jobs:
+  fab-files:
+    env:
+      KIBOT_QR_CONFIG: kibot_qr.yaml
+      PROJ_NAME: clickwheel_breakout_4th_gen
+    name: PCB fabrication files
+    runs-on: ubuntu-latest
+    container: setsoft/kicad_auto:ki6.0.7_Debian
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+
+      - name: Cache date
+        run: echo "DATE=$(date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
+
+      - name: Filename friendly date
+        run: echo "BUILD_DATE=$(echo $DATE | sed -r -e 's/:/./g' -e 's/ /_/g')" >> $GITHUB_ENV
+
+      - name: Store branch name
+        run: echo "BUILD_BRANCH=${GITHUB_REF##*/}" >> $GITHUB_ENV
+
+      - name: Store commit hash
+        run: echo "BUILD_COMMIT=$(git rev-parse --short $GITHUB_SHA)" >> $GITHUB_ENV
+
+      - name: Generate schematics filename
+        run: echo "SCHEM_NAME=${PROJ_NAME}_${BUILD_BRANCH}_${BUILD_COMMIT}_${BUILD_DATE}_schem" >> $GITHUB_ENV
+
+      - name: Generate 3d filename
+        run: echo "MECH_NAME=${PROJ_NAME}_${BUILD_BRANCH}_${BUILD_COMMIT}_${BUILD_DATE}_3d" >> $GITHUB_ENV
+
+      - name: Generate gerbers filename
+        run: echo "GERBERS_NAME=${PROJ_NAME}_${BUILD_BRANCH}_${BUILD_COMMIT}_${BUILD_DATE}_gerbers" >> $GITHUB_ENV
+
+      - name: Generate QR code text
+        run: python3 ./scripts/gen_qr_kibot_config.py
+
+      - name: Generate QR code footprint/symbol
+        run: kibot -c "$KIBOT_QR_CONFIG"
+
+      - name: Generate manufacturing outputs
+        run: kibot -c kibot_export.yaml
+
+      - name: Generate 3D models
+        uses: Gigahawk/freecad-export-action@0.20.1_2
+        with:
+          paths: |
+            clickwheel_breakout_4th_gen.kicad_pcb
+          output-path: 3D_EXPORT
+          export-types: |
+            step
+            wrl
+            stl
+
+      - name: Upload 3D models
+        if: ${{ !env.ACT }}
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ env.MECH_NAME }}
+          path: 3D_EXPORT
+
+      - name: Upload gerbers
+        if: ${{ !env.ACT }}
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ env.GERBERS_NAME }}
+          path: Manufacturers
+
+      - name: Upload schematics
+        if: ${{ !env.ACT }}
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ env.SCHEM_NAME }}
+          path: Schematic
