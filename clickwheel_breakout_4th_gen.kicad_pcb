@@ -1176,7 +1176,7 @@
   (gr_text "Board thickness: 0.8mm" (at 71.12 27.94) (layer "Cmts.User") (tstamp 37e8181c-a81e-498b-b2e2-0aef0c391059)
     (effects (font (size 5 5) (thickness 0.5)))
   )
-  (gr_text "NOTE: CLICKWHEEL IS NOT AN I2C DEVICE.\nSee https://jasongarr.wordpress.com/project-pages/ipod-clickwheel-hack/ for more info" (at 65.024 148.844) (layer "Cmts.User") (tstamp 5ca4be1c-537e-4a4a-b344-d0c8ffde8546)
+  (gr_text "NOTE: CLICKWHEEL IS NOT AN I2C DEVICE.\nSee https://github.com/Gigahawk/clickwheel_reverse_eng for more info" (at 65.024 148.844) (layer "Cmts.User") (tstamp 5ca4be1c-537e-4a4a-b344-d0c8ffde8546)
     (effects (font (size 1 1) (thickness 0.15)))
   )
 

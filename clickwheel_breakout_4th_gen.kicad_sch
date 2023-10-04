@@ -1221,7 +1221,7 @@
     (uuid f7167ed0-f1e4-4189-9bff-0cb39b543588)
   )
 
-  (text "NOTE: CLICKWHEEL IS NOT AN I2C DEVICE.\nSee https://jasongarr.wordpress.com/project-pages/ipod-clickwheel-hack/ for more info"
+  (text "NOTE: CLICKWHEEL IS NOT AN I2C DEVICE.\nSee https://github.com/Gigahawk/clickwheel_reverse_eng for more info"
     (at 29.21 67.31 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 689b7453-814c-485c-bba8-2f6e6b5a526d)
