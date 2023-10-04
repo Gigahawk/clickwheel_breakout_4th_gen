@@ -7,7 +7,7 @@
   (title_block
     (title "iPod 4th Gen Clickwheel Breakout")
     (date "${DATE}")
-    (rev "${REVISION}")
+    (rev "${TAG} (${HASH})")
   )
 
   (lib_symbols
