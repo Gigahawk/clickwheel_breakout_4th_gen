@@ -29,6 +29,19 @@
   )
 
   (setup
+    (stackup
+      (layer "F.SilkS" (type "Top Silk Screen"))
+      (layer "F.Paste" (type "Top Solder Paste"))
+      (layer "F.Mask" (type "Top Solder Mask") (thickness 0.01))
+      (layer "F.Cu" (type "copper") (thickness 0.035))
+      (layer "dielectric 1" (type "core") (thickness 0.71) (material "FR4") (epsilon_r 4.5) (loss_tangent 0.02))
+      (layer "B.Cu" (type "copper") (thickness 0.035))
+      (layer "B.Mask" (type "Bottom Solder Mask") (thickness 0.01))
+      (layer "B.Paste" (type "Bottom Solder Paste"))
+      (layer "B.SilkS" (type "Bottom Silk Screen"))
+      (copper_finish "None")
+      (dielectric_constraints no)
+    )
     (pad_to_mask_clearance 0.05)
     (pcbplotparams
       (layerselection 0x00010fc_ffffffff)
@@ -1156,6 +1169,9 @@
   )
   (gr_text "Connect LCK_COM to DGND to unlock controls" (at 96.774 80.772) (layer "Cmts.User") (tstamp 01e9b6e7-adf9-4ee7-9447-a588630ee4a2)
     (effects (font (size 1 1) (thickness 0.15)) (justify left))
+  )
+  (gr_text "Board thickness: 0.8mm" (at 66.7258 154.1272) (layer "Cmts.User") (tstamp 3767d7c9-3a51-4505-afe9-95011edf4e28)
+    (effects (font (size 1 1) (thickness 0.15)))
   )
   (gr_text "Board thickness: 0.8mm" (at 71.12 27.94) (layer "Cmts.User") (tstamp 37e8181c-a81e-498b-b2e2-0aef0c391059)
     (effects (font (size 5 5) (thickness 0.5)))
