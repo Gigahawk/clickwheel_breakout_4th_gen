@@ -1,4 +1,4 @@
 (sym_lib_table
+  (version 7)
   (lib (name "gigahawk")(type "KiCad")(uri "${KIPRJMOD}/Gigahawk.pretty/gigahawk.kicad_sym")(options "")(descr ""))
-  (lib (name "QR")(type "KiCad")(uri "${KIPRJMOD}/QR_libs/QR.kicad_sym")(options "")(descr ""))
 )
