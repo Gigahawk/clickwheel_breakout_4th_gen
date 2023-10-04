@@ -9,7 +9,7 @@ jobs:
       PROJ_NAME: clickwheel_breakout_4th_gen
     name: PCB fabrication files
     runs-on: ubuntu-latest
-    container: setsoft/kicad_auto:ki6.0.7_Debian
+    container: setsoft/kicad_auto:ki7
     steps:
       - uses: actions/checkout@v3
         with:
@@ -36,11 +36,11 @@ jobs:
       - name: Generate gerbers filename
         run: echo "GERBERS_NAME=${PROJ_NAME}_${BUILD_BRANCH}_${BUILD_COMMIT}_${BUILD_DATE}_gerbers" >> $GITHUB_ENV
 
-      - name: Generate QR code text
-        run: python3 ./scripts/gen_qr_kibot_config.py
+      - name: Generate boardview filename
+        run: echo "BOARDVIEW_NAME=${PROJ_NAME}_${BUILD_BRANCH}_${BUILD_COMMIT}_${BUILD_DATE}_boardview" >> $GITHUB_ENV
 
-      - name: Generate QR code footprint/symbol
-        run: kibot -c "$KIBOT_QR_CONFIG"
+      - name: Generate bom filename
+        run: echo "BOM_NAME=${PROJ_NAME}_${BUILD_BRANCH}_${BUILD_COMMIT}_${BUILD_DATE}_bom" >> $GITHUB_ENV
 
       - name: Generate manufacturing outputs
         run: kibot -c kibot_export.yaml
@@ -76,3 +76,42 @@ jobs:
         with:
           name: ${{ env.SCHEM_NAME }}
           path: Schematic
+
+      - name: Upload boardview
+        if: ${{ !env.ACT }}
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ env.BOARDVIEW_NAME }}
+          path: BoardView
+
+      - name: Upload BOM
+        if: ${{ !env.ACT }}
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ env.BOM_NAME }}
+          path: BOM
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/')
+    needs: fab-files
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download files
+        uses: actions/download-artifact@v3
+
+      - name: Zip each folder
+        run: |
+          for d in */; do
+            echo "Zipping ${d} into ${d%/}.zip"
+            zip -r "${d%/}.zip" "$d"
+            echo "Deleting ${d}"
+            rm -rf "$d"
+          done
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            *
+
+

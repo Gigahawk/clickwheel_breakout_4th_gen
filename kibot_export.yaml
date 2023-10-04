@@ -4,10 +4,13 @@ kibot:
 preflight:
   update_qr: true
   set_text_variables:
-    - name: 'REVISION'
+    - name: 'HASH'
       command: 'git --no-pager log -1 --format="%h"'
     - name: 'DATE'
       command: echo "$DATE"
+    - name: 'TAG'
+      command: 'git describe --tags --abbrev=0 --exact-match 2>/dev/null; exit 0'
+
 
 outputs:
 
@@ -135,3 +138,28 @@ outputs:
     comment: Schematic in PDF format
     type: pdf_sch_print
     dir: Schematic
+
+  - name: boardview
+    comment: Exports the PCB in board view format.
+    type: boardview
+    dir: 'BoardView'
+    options:
+      output: '%f-%i%I%v.%x'
+
+  - name: bom
+    comment: Bill of materials
+    type: bom
+    dir: BOM
+    options:
+      format: CSV
+      columns:
+        - field: Description
+        - field: References
+        - field: Value
+        - field: Footprint
+        - field: Quantity Per PCB
+          name: Quantity
+        - field: Digikey
+        - field: Mouser
+        - field: LCSC
+
